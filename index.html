@@ -1,690 +1,81 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Meuren - Corretor de Imóveis de Alto Padrão | João Pessoa e Cabedelo</title>
-    <meta name="description" content="Guilherme Meuren, especialista em imóveis de alto padrão em João Pessoa e Cabedelo. Conheça os empreendimentos Samburá, Enseada e Elevatto.">
-    <meta name="keywords" content="imóveis alto padrão, João Pessoa, Cabedelo, corretor imóveis, luxo, apartamentos, Samburá, Enseada, Elevatto, Guilherme Meuren">
-    <meta name="author" content="Guilherme Meuren">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://grmeuren.github.io/guilherme-meuren-site/">
-    <meta property="og:title" content="Guilherme Meuren - Corretor de Imóveis de Alto Padrão">
-    <meta property="og:description" content="Especialista em imóveis de alto padrão em João Pessoa e Cabedelo. Conheça os empreendimentos Samburá, Enseada e Elevatto.">
-    <meta property="og:image" content="https://grmeuren.github.io/guilherme-meuren-site/assets/paisagem_joao_pessoa-CDJKMue7-CDJKMue7.png">
-    <meta property="og:locale" content="pt_BR">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://grmeuren.github.io/guilherme-meuren-site/">
-    <meta property="twitter:title" content="Guilherme Meuren - Corretor de Imóveis de Alto Padrão">
-    <meta property="twitter:description" content="Especialista em imóveis de alto padrão em João Pessoa e Cabedelo.">
-    <meta property="twitter:image" content="https://grmeuren.github.io/guilherme-meuren-site/assets/paisagem_joao_pessoa-CDJKMue7-CDJKMue7.png">
-    
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #d97706;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d97706;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/paisagem_joao_pessoa-CDJKMue7-CDJKMue7.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin: 0.5rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: #d97706;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #b45309;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #333;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #d97706;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Sobre Section */
-        .sobre {
-            background: #f9fafb;
-        }
-
-        .sobre-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .sobre-text h2 {
-            font-size: 2.5rem;
-            color: #d97706;
-            margin-bottom: 1.5rem;
-        }
-
-        .sobre-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
-
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .badge {
-            background: #e5e7eb;
-            color: #374151;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .sobre-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Empreendimentos */
-        .empreendimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .card:hover .card-image img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card-location {
-            color: #666;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card-description {
-            color: #555;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #d97706;
-        }
-
-        /* Outras categorias */
-        .outras-categorias {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Localização */
-        .localizacao {
-            background: #f9fafb;
-        }
-
-        .localizacao-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Contato */
-        .contato-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contato-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contato-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contato-item svg {
-            width: 20px;
-            height: 20px;
-            color: #d97706;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #d97706;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            .sobre-content,
-            .contato-content {
-                grid-template-columns: 1fr;
-            }
-
-            .empreendimentos-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Icons */
-        .icon {
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">
-                🏠 Guilherme Meuren
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#imoveis">Imóveis</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Imóveis de Alto Padrão</h1>
-            <p>Especialista em imóveis de luxo em João Pessoa e Cabedelo. Encontre o imóvel dos seus sonhos com atendimento personalizado e exclusivo.</p>
-            <div>
-                <a href="#imoveis" class="btn btn-primary">Ver Imóveis</a>
-                <a href="#contato" class="btn btn-outline">Falar Comigo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <h2>Sobre Guilherme Meuren</h2>
-                    <p>Com uma trajetória consolidada no mercado imobiliário, Guilherme Meuren se destaca como um corretor de imóveis de alto padrão, com expertise nas vibrantes cidades de João Pessoa e Cabedelo, na Paraíba.</p>
-                    <p>Sua paixão por conectar pessoas a seus lares ideais, aliada a um profundo conhecimento do segmento de luxo, o torna a escolha perfeita para quem busca exclusividade, sofisticação e os melhores investimentos imobiliários na região.</p>
-                    <div class="badges">
-                        <span class="badge">CRECI: 16.582</span>
-                        <span class="badge">CNAI: 8099</span>
-                        <span class="badge">Imóveis de Alto Padrão</span>
-                        <span class="badge">João Pessoa</span>
-                        <span class="badge">Cabedelo</span>
-                        <span class="badge">Atendimento Personalizado</span>
-                    </div>
-                    <a href="#contato" class="btn btn-primary">Entre em Contato</a>
-                </div>
-                <div class="sobre-image">
-                    <img src="assets/guilherme_meuren_foto-B-XUqhF7.png" alt="Guilherme Meuren">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Empreendimentos Section -->
-    <section id="imoveis">
-        <div class="container">
-            <h2 class="section-title">Empreendimentos em Destaque</h2>
-            <p class="section-subtitle">Conheça nossa seleção exclusiva de empreendimentos de luxo, cuidadosamente escolhidos para atender aos mais elevados padrões de exigência.</p>
-            
-            <div class="empreendimentos-grid">
-                <!-- Samburá -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/sambura_fachada-bbf-qLFO.jpg" alt="Samburá Eco Resort">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">🏠 Samburá Eco Resort</h3>
-                        <div class="card-location">📍 Ponta de Matos, Cabedelo</div>
-                        <p class="card-description">1 a 3 quartos (22m² a 88m²), Gardens (147m²) e Studios com cobertura (44 a 53m²). Estrutura completa de Eco Resort com piscinas e restaurante no térreo.</p>
-                        <div class="card-footer">
-                            <span class="price">R$ 354.114</span>
-                            <a href="https://api.whatsapp.com/send/?phone=5583993030057&text=Olá! Gostaria de saber mais sobre o Samburá Eco Resort." target="_blank" class="btn btn-primary">💬 Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Enseada -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/enseada_fachada-DrTSm5wC.jpg" alt="Enseada Isidro Gomes">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">🏠 Enseada Isidro Gomes</h3>
-                        <div class="card-location">📍 Bessa, João Pessoa</div>
-                        <p class="card-description">197 unidades (20m² a 180m²), 98 Residenciais e 98 Flat's. Apartamentos com solário, piscina privativa e lounges privativos.</p>
-                        <div class="card-footer">
-                            <span class="price">R$ 802.306</span>
-                            <a href="https://api.whatsapp.com/send/?phone=5583993030057&text=Olá! Gostaria de saber mais sobre o Enseada Isidro Gomes." target="_blank" class="btn btn-primary">💬 Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Elevatto -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/elevatto_fachada-BAki7t_P.png" alt="Elevatto">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">🏠 Elevatto</h3>
-                        <div class="card-location">📍 Bessa, João Pessoa</div>
-                        <p class="card-description">148 unidades (64m² a 148m²), apartamentos de 3 quartos (80m² a 142m²). Áreas coletivas no 11º andar, unidades a partir do 8º pavimento com vista para o mar.</p>
-                        <div class="card-footer">
-                            <span class="price">R$ 585.858</span>
-                            <a href="https://api.whatsapp.com/send/?phone=5583993030057&text=Olá! Gostaria de saber mais sobre o Elevatto." target="_blank" class="btn btn-primary">💬 Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Outras categorias -->
-            <div class="outras-categorias">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/interior_imovel_alto_padrao-B7tvkusC-B7tvkusC.png" alt="Casas em Condomínios Fechados">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Casas em Condomínios Fechados</h3>
-                        <p class="card-description">Para quem valoriza privacidade, segurança e contato com a natureza. Projetos arquitetônicos arrojados, jardins exuberantes, áreas de lazer privativas e a tranquilidade de um ambiente exclusivo.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #fef3c7, #fbbf24); display: flex; align-items: center; justify-content: center;">
-                        <div style="text-align: center;">
-                            <div style="font-size: 4rem; margin-bottom: 1rem;">🏠</div>
-                            <h4 style="color: #92400e;">Terrenos Exclusivos</h4>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Terrenos Exclusivos</h3>
-                        <p class="card-description">Invista no futuro construindo o imóvel dos seus sonhos em terrenos exclusivos, localizados em áreas de alta valorização. Metragens generosas e infraestrutura completa para projetos personalizados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Localização Section -->
-    <section id="localizacao" class="localizacao">
-        <div class="container">
-            <h2 class="section-title">Localização Privilegiada</h2>
-            <p class="section-subtitle">Atuação especializada em João Pessoa e Cabedelo, duas das cidades mais desejadas da Paraíba para investimentos imobiliários de alto padrão.</p>
-            
-            <div class="localizacao-grid">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/paisagem_joao_pessoa-CDJKMue7-CDJKMue7.png" alt="João Pessoa">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">João Pessoa</h3>
-                        <p class="card-description">Capital da Paraíba, com infraestrutura moderna e qualidade de vida excepcional.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/paisagem_cabedelo-gmHYLU29-gmHYLU29.png" alt="Cabedelo">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Cabedelo</h3>
-                        <p class="card-description">Paraíso litorâneo com praias paradisíacas e empreendimentos exclusivos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato Section -->
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="section-subtitle">Pronto para encontrar o imóvel de alto padrão que você sempre sonhou? Entre em contato e agende uma consultoria exclusiva.</p>
-            
-            <div class="contato-content">
-                <div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Informações de Contato</h3>
-                    <div class="contato-info">
-                        <div class="contato-item">
-                            <span>📞</span>
-                            <div>
-                                <strong>Telefone</strong><br>
-                                <a href="tel:+5583993030057" style="color: #d97706;">(83) 99303-0057</a>
-                            </div>
-                        </div>
-                        <div class="contato-item">
-                            <span>💬</span>
-                            <div>
-                                <strong>Agente de IA</strong><br>
-                                <a href="tel:+5583991456868" style="color: #d97706;">(83) 99145-6868</a>
-                            </div>
-                        </div>
-                        <div class="contato-item">
-                            <span>📧</span>
-                            <div>
-                                <strong>E-mail</strong><br>
-                                <a href="mailto:grmeuren@gmail.com" style="color: #d97706;">grmeuren@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contato-item">
-                            <span>📱</span>
-                            <div>
-                                <strong>Instagram</strong><br>
-                                <a href="https://instagram.com/grmeuren" target="_blank" style="color: #d97706;">@grmeuren</a>
-                            </div>
-                        </div>
-                        <div class="contato-item">
-                            <span>📍</span>
-                            <div>
-                                <strong>Área de Atuação</strong><br>
-                                João Pessoa e Cabedelo - PB
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Envie uma Mensagem</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="nome" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Seu e-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="telefone" placeholder="Seu telefone">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">💬 Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Guilherme Meuren - Corretor de Imóveis de Alto Padrão. Todos os direitos reservados.</p>
-            <p style="color: #9ca3af; margin-top: 0.5rem;">CRECI: 16.582 | CNAI: 8099</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scroll para links de navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Formulário de contato
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
-            const mensagem = document.getElementById('mensagem').value;
-            
-            const whatsappMessage = `Olá Guilherme! Meu nome é ${nome}. ${mensagem}`;
-            const whatsappUrl = `https://api.whatsapp.com/send/?phone=5583993030057&text=${encodeURIComponent(whatsappMessage)}&type=phone_number&app_absent=0`;
-            
-            window.open(whatsappUrl, '_blank');
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-    </script>
-</body>
-</html>
+🏠 Guilherme Meuren – Corretor / Arquiteto
+•	Início
+•	Imóveis
+•	Mercado
+•	Contato
+Imóveis de Alto Padrão
+Especialista em imóveis de luxo em João Pessoa e Cabedelo. Mercado em alta com 18,25% de valorização!
+Ver Imóveis Falar Comigo 
+🏢 Novos Lançamentos em Destaque
+ 
+🌊 Acqua Living
+📍 Jardim Oceania, João Pessoa
+Apartamentos modernos com piscina completa, salão de festas e playground. Últimas unidades disponíveis!
+💰 A partir de R$ 380.000
+💬 Saiba Mais 
+ 
+🏙️ Alti
+📍 Altiplano Cabo Branco, João Pessoa
+Projeto arquitetônico moderno no bairro mais valorizado. Vista privilegiada e acabamento diferenciado.
+💰 A partir de R$ 720.000
+💬 Saiba Mais 
+ 
+💼 Arian
+📍 Intermares, Cabedelo
+Flats para investimento com ROI de 8-12% ao ano. Ideal para renda passiva próximo às praias.
+💰 A partir de R$ 320.000
+💬 Saiba Mais 
+ 
+🌺 Florezza
+📍 Intermares, Cabedelo
+2 a 3 quartos com piscina infinita, academia e espaço gourmet. Estrutura completa de lazer.
+💰 A partir de R$ 450.000
+💬 Saiba Mais 
+ 
+👑 Artus Blanc
+📍 Altiplano Cabo Branco, João Pessoa
+Ícone de sofisticação no Altiplano. Vista mar e acabamento premium no bairro mais valorizado.
+💰 A partir de R$ 850.000
+💬 Saiba Mais 
+ 
+🏡 Casa Altiplano
+📍 Altiplano, João Pessoa
+1 e 2 quartos (36 a 61m²). Preço acessível no bairro mais valorizado da cidade.
+💰 A partir de R$ 373.360
+💬 Saiba Mais 
+📊 Mercado em Alta - Oportunidade Única
+18,25%
+Valorização em 12 meses
+70%
+Vendas para investidores externos
+3x
+Preços menores que São Paulo
+15,3%
+Crescimento populacional
+🏆 Regiões em Destaque
+🏙️ Altiplano
+20%
+Valorização anual - Bairro mais valorizado
+🌊 Intermares
+15%
+Crescimento acelerado - Ideal para flats
+🌳 Jardim Oceania
+12%
+Mercado consolidado - Infraestrutura completa
+📱 Entre em Contato
+Pronto para encontrar o imóvel de alto padrão que você sempre sonhou?
+📞 
+WhatsApp
+(83) 99303-0057
+📧 
+E-mail
+grmeuren@gmail.com
+📱 
+Instagram
+@grmeuren
+📍 
+Área de Atuação
+João Pessoa e Cabedelo - PB
+CRECI: 16.582 | CNAI: 8099
+Especialista em Imóveis de Alto Padrão
 
